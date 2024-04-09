@@ -1,0 +1,8 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+}
