@@ -87,6 +87,18 @@
         gap: 0.75rem;
       }
 
+      .card-content a {
+        text-decoration: none;
+        color: black;
+        font-weight: var(--fw-bold);
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .card-content a:hover {
+        color: var(--clr-yellow);
+      }
+
       .info-text {
         color: var(--clr-grey);
       }
@@ -114,6 +126,27 @@
       .card-teacher p {
         font-weight: bold;
       }
+
+      @media (max-width: 768px) {
+        .card-container {
+          flex-direction: column;
+          max-width: 327px;
+        }
+
+        p {
+          font-size: 0.875rem;
+        }
+
+        .card-container a {
+          font-size: 1.25rem;
+        }
+
+        .card-image img {
+          width: 100%;
+          max-height: 200px;
+          object-fit: cover;
+        }
+      }
     </style>
   </head>
   <body>
@@ -124,7 +157,7 @@
       <div class="card-content">
         <p class="card-tag">Learning</p>
         <p>Published 21 Dec 2023</p>
-        <h1>HTML & CSS foundations</h1>
+        <a href="">HTML & CSS foundations</a>
         <p class="info-text">
           These languages are the backbone of every website, defining structure,
           content, and presentation.
