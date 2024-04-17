@@ -1,0 +1,374 @@
+:root {
+  --ff-primary: "Red Hat Display", sans-serif;
+
+  --fw-bold: 900;
+  --fw-medium: 500;
+
+  --fs-header1: 4rem;
+  --fs-header2: 2.5rem;
+  --fs-overline: 1rem;
+  --fs-bodytext: 1.125rem;
+
+  --clr-dark-teal: hsl(195, 37%, 48%);
+  --clr-teal-hover: hsl(195, 56%, 62%);
+  --clr-light-teal: hsl(192, 90%, 77%);
+  --clr-dark-purple: hsl(268, 34%, 53%);
+  --clr-purple-hover: hsl(268, 54%, 65%);
+  --clr-light-purple: hsl(268, 100%, 86%);
+
+  --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(240, 10%, 57%);
+  --clr-neutral-600: hsl(240, 21%, 20%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-primary);
+  margin: 0;
+  padding: 0;
+  max-width: 1600px;
+  margin: auto;
+}
+
+p,
+h1,
+h2,
+span {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-header1);
+  line-height: 4rem;
+}
+
+h2 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-header2);
+  line-height: 2.75rem;
+}
+
+p {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-bodytext);
+  color: var(--clr-neutral-400);
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+}
+
+.overline {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-overline);
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: var(--clr-dark-teal);
+}
+
+.button-home {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+}
+
+.button-home:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+/* hero section */
+.hero {
+  display: grid;
+  column-gap: 1rem;
+  overflow: hidden;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  grid-template-areas:
+    "logo logo"
+    "faces1 faces2"
+    "textcontent textcontent";
+}
+
+.hero > .logo {
+  grid-area: logo;
+  justify-self: center;
+  width: 119px;
+  padding-block: 3rem 3.375rem;
+}
+
+.hero > img:nth-child(2) {
+  grid-area: faces1;
+}
+.hero > img:nth-child(3) {
+  grid-area: faces2;
+}
+
+.hero-content {
+  grid-area: textcontent;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  padding-inline: 1.5rem;
+  max-width: 30rem;
+  padding-top: 3rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero-content > h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero-content > p {
+  margin-bottom: 2rem;
+}
+
+.blue-button {
+  width: 193px;
+  height: 58px;
+  background-color: var(--clr-dark-teal);
+  color: var(--clr-neutral-200);
+}
+
+.blue-button:hover {
+  background-color: var(--clr-teal-hover);
+}
+
+.blue-button > span {
+  color: var(--clr-light-teal);
+}
+.purple-button {
+  width: 139px;
+  height: 58px;
+  background-color: var(--clr-dark-purple);
+  color: var(--clr-neutral-200);
+}
+
+.purple-button:hover {
+  background-color: var(--clr-purple-hover);
+}
+
+/* features section */
+.features {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-bodytext);
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+
+.transition {
+  margin-top: 4rem;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.line {
+  height: 84px;
+  width: 1px;
+  background-color: rgba(135, 135, 157, 0.5);
+}
+
+.circle {
+  border: 1px solid rgba(135, 135, 157, 0.5);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-bodytext);
+}
+
+.image-grid-gallery {
+  display: grid;
+  grid-template-areas:
+    "one two"
+    "three four";
+  gap: 1.5rem;
+  padding-block: 4rem;
+  margin-inline: auto;
+  max-width: 1110px;
+}
+
+.image-grid-gallery > img {
+  border-radius: 0.5rem;
+}
+
+.image-grid-gallery img:nth-child(1) {
+  grid-area: one;
+}
+.image-grid-gallery img:nth-child(2) {
+  grid-area: two;
+}
+.image-grid-gallery img:nth-child(3) {
+  grid-area: three;
+}
+.image-grid-gallery img:nth-child(4) {
+  grid-area: four;
+}
+
+.feature-content {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.feature-content > p:nth-child(1) {
+  margin-bottom: 1.5rem;
+}
+
+.feature-content > h2 {
+  margin-bottom: 2rem;
+}
+
+/* footer */
+footer {
+  background-image: linear-gradient(
+      hsl(195, 37%, 48%, 0.8),
+      hsl(195, 37%, 48%, 0.8)
+    ),
+    url(./assets/desktop/image-footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 428px;
+  position: relative;
+  margin-top: 11rem;
+  padding-top: 5.75rem;
+  padding-inline: 1.5rem;
+}
+
+/* Add this new rule */
+footer > .transition {
+  position: absolute;
+  z-index: 1;
+  top: -41%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer > .transition > .circle {
+  background-color: white;
+}
+
+.footer-content {
+  text-align: center;
+  color: var(--clr-neutral-200);
+}
+
+.footer-content > p {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--clr-neutral-200);
+}
+
+.purple-download {
+  width: 193px;
+  height: 58px;
+  background-color: var(--clr-dark-purple);
+  color: var(--clr-neutral-200);
+}
+
+.purple-download:hover {
+  background-color: var(--clr-purple-hover);
+}
+
+.purple-download > span {
+  color: var(--clr-light-purple);
+}
+
+@media screen and (min-width: 40em) {
+  .hero-faces > img {
+    min-width: 400px;
+  }
+
+  .hero-content {
+    margin-top: 4.5rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-grid-gallery {
+    grid-template-areas: "one two three four";
+  }
+
+  .button-home {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .hero {
+    display: grid;
+    max-width: 100%;
+    grid-template-areas:
+      "logo logo logo"
+      "faces1 textcontent faces2";
+    align-items: center;
+    justify-items: center;
+  }
+
+  .hero-content {
+    padding-inline: 2rem;
+    max-width: 30rem;
+    padding-top: 0;
+  }
+
+  footer {
+    max-height: 308px;
+  }
+
+  footer > .transition {
+    position: absolute;
+    z-index: 1;
+    top: -55%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
