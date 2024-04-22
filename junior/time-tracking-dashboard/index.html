@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- javascript -->
+    <script defer src="app.js"></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <!-- homepage button -->
+    <!-- <header>
+      <a href="https://jreyiv.github.io/frontend-mentor/" class="button-home"
+        ><div>Homepage</div>
+      </a>
+    </header> -->
+
+    <main>
+      <section class="dashboard-grid">
+        <!-- profile card -->
+        <div class="profile-card">
+          <div class="profile-user">
+            <img src="./images/image-jeremy.png" alt="profile picture" />
+            <span>Report for</span>
+            <h1>Jeremy Robson</h1>
+          </div>
+          <div class="profile-filter">
+            <button id="daily-btn">Daily</button>
+            <button id="weekly-btn">Weekly</button>
+            <button id="monthly-btn">Monthly</button>
+          </div>
+        </div>
+
+        <!-- work card -->
+        <div class="time-card work">
+          <div class="top-image">
+            <img src="./images/icon-work.svg" alt="work icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Work</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">32hrs</p>
+              <p class="previous">Previous - 36hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- play card -->
+        <div class="time-card play">
+          <div class="top-image">
+            <img src="./images/icon-play.svg" alt="play icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Play</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">10hrs</p>
+              <p class="previous">Previous - 8hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- study card -->
+        <div class="time-card study">
+          <div class="top-image">
+            <img src="./images/icon-study.svg" alt="study icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Study</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">4hrs</p>
+              <p class="previous">Previous - 8hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- exercise card -->
+        <div class="time-card exercise">
+          <div class="top-image">
+            <img src="./images/icon-exercise.svg" alt="exercise icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Exercise</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">4hrs</p>
+              <p class="previous">Previous - 5hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- social card -->
+        <div class="time-card social">
+          <div class="top-image">
+            <img src="./images/icon-social.svg" alt="social icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Social</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">5hrs</p>
+              <p class="previous">Previous - 10hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- self care card -->
+        <div class="time-card self-care">
+          <div class="top-image">
+            <img src="./images/icon-self-care.svg" alt="self-care icon" />
+          </div>
+          <div class="card-bottom">
+            <div class="header-container">
+              <h2 class="title">Self Care</h2>
+              <button>
+                <img src="./images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </button>
+            </div>
+            <div class="time-content">
+              <p class="hrs">2hrs</p>
+              <p class="previous">Previous - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
