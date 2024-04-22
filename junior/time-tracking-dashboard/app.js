@@ -32,8 +32,34 @@ function updateTimeCards(period) {
       const hrsElement = timeCard.querySelector(".hrs");
       const prevElement = timeCard.querySelector(".previous");
 
-      hrsElement.textContent = `${current} hrs`;
-      prevElement.textContent = `${previous} hrs`;
+      //   current
+      if (current === 1) {
+        hrsElement.textContent = `${current} hr`;
+      } else {
+        hrsElement.textContent = `${current} hrs`;
+      }
+
+      // previous
+
+      if (period === "daily") {
+        if (previous === 1) {
+          prevElement.textContent = `Yesterday: ${previous} hr`;
+        } else {
+          prevElement.textContent = `Yesterday: ${previous} hrs`;
+        }
+      } else if (period === "weekly") {
+        if (previous === 1) {
+          prevElement.textContent = `Last Week: ${previous} hr`;
+        } else {
+          prevElement.textContent = `Last Week: ${previous} hrs`;
+        }
+      } else {
+        if (previous === 1) {
+          prevElement.textContent = `Last Month: ${previous} hr`;
+        } else {
+          prevElement.textContent = `Last Month: ${previous} hrs`;
+        }
+      }
     }
   });
 }
