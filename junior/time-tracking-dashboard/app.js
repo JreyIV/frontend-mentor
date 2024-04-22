@@ -34,30 +34,30 @@ function updateTimeCards(period) {
 
       //   current
       if (current === 1) {
-        hrsElement.textContent = `${current} hr`;
+        hrsElement.textContent = `${current}hr`;
       } else {
-        hrsElement.textContent = `${current} hrs`;
+        hrsElement.textContent = `${current}hrs`;
       }
 
       // previous
 
       if (period === "daily") {
         if (previous === 1) {
-          prevElement.textContent = `Yesterday: ${previous} hr`;
+          prevElement.textContent = `Yesterday - ${previous}hr`;
         } else {
-          prevElement.textContent = `Yesterday: ${previous} hrs`;
+          prevElement.textContent = `Yesterday - ${previous}hrs`;
         }
       } else if (period === "weekly") {
         if (previous === 1) {
-          prevElement.textContent = `Last Week: ${previous} hr`;
+          prevElement.textContent = `Last Week - ${previous}hr`;
         } else {
-          prevElement.textContent = `Last Week: ${previous} hrs`;
+          prevElement.textContent = `Last Week - ${previous}hrs`;
         }
       } else {
         if (previous === 1) {
-          prevElement.textContent = `Last Month: ${previous} hr`;
+          prevElement.textContent = `Last Month - ${previous}hr`;
         } else {
-          prevElement.textContent = `Last Month: ${previous} hrs`;
+          prevElement.textContent = `Last Month - ${previous}hrs`;
         }
       }
     }
