@@ -115,4 +115,5 @@ function resetInputs() {
   radioBtns.forEach((radioBtn) => (radioBtn.checked = false));
   totalElement.textContent = "$0.00";
   tipElement.textContent = "$0.00";
+  tipElement.style.fontSize = "";
 }
