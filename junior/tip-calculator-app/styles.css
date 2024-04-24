@@ -21,14 +21,11 @@
 }
 
 body {
+  background-color: var(--clr-light-grayish-cyan);
   display: grid;
   place-items: center;
   height: 100vh;
   margin: 0;
-  font-family: var(--ff-primary);
-  background-color: var(--clr-light-grayish-cyan);
-  font-size: var(--fs-primary);
-  font-weight: var(--fw-normal);
 }
 
 img {
@@ -65,6 +62,9 @@ img {
 }
 
 .calculator-container {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-normal);
   background-color: var(--clr-white);
   padding: 2rem;
   border-radius: 1rem;
