@@ -6,72 +6,139 @@
     <title>Frontend Mentor | Joseph Reyes</title>
 
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="
+      as="image"
+    />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/2638b55655.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
-      <h1>Frontend Mentor | Joseph Reyes</h1>
+      <!-- Hero -->
+      <h1 class="title">
+        Frontend Mentor<br />
+        <span class="gradient-text">Portfolio</span>
+      </h1>
+      <p>
+        All designs given by Frontend Mentor. All the code done by myself. Pure
+        html, css, and javascript.
+      </p>
     </header>
     <main>
-      <p>Newbie challenges:</p>
-      <ul>
-        <li>
-          <a href="./noobie/challenge-1/qr-code-component-main/"
-            >qr-code-component</a
-          >
-        </li>
-        <li>
-          <a href="./noobie/challenge-2/blog-preview-card-main/"
-            >blog-preview-card</a
-          >
-        </li>
-        <li>
-          <a href="./noobie/social-links-profile/">social-links-profile</a>
-        </li>
-        <li>
-          <a href="./noobie/recipe-page/">recipe-page</a>
-        </li>
-        <li>
-          <a href="./noobie/product-preview-card/">product-preview-card</a>
-        </li>
-        <li>
-          <a href="./noobie/four-card-feature/">four-card-feature</a>
-        </li>
-        <li>
-          <a href="./noobie/meet-landing-page/">meet-landing-page</a>
-        </li>
-        <li>
-          <a href="./noobie/article-preview-component/">
-            article-preview-component</a
-          >
-        </li>
-      </ul>
+      <!-- transition -->
+      <section class="transition">
+        <div class="transition-title">
+          <h2><span class="subheading-text">Browse</span> projects</h2>
+        </div>
+        <div class="transition-image">
+          <div class="left-line"></div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <div class="right-line"></div>
+        </div>
+      </section>
 
-      <p>Junior challenges:</p>
-      <ul>
-        <li>
-          <a href="./junior/testimonial-grid-section/"
-            >testimonial-grid-section</a
-          >
-        </li>
-        <li>
-          <a href="./junior/newsletter-sign-up">news-letter-sign-up</a>
-        </li>
-        <li>
-          <a href="./junior/time-tracking-dashboard/"
-            >time-tracking-dashboard</a
-          >
-        </li>
-        <li>
-          <a href="./junior/tip-calculator-app/">tip-calculator-app</a>
-        </li>
-      </ul>
+      <!-- main projects -->
+      <section class="main-container">
+        <div class="newbie-container">
+          <h3 class="project-title">Newbie challenges</h3>
+          <div class="scrolling-container snaps-inline">
+            <a
+              href="./noobie/challenge-1/qr-code-component-main/"
+              class="project-card"
+            >
+              <img
+                src="./media/images/QR-code-component.jpg"
+                class="project-card"
+              />
+              <p>QR Card Component</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a
+              href="./noobie/challenge-2/blog-preview-card-main/"
+              class="project-card"
+            >
+              <img src="./media/images/blog-preview-card.jpg" />
+              <p>Blog Preview Card</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/social-links-profile/" class="project-card">
+              <img src="./media/images/social-links-profile.jpg" />
+              <p>Social Links Profile</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/recipe-page/" class="project-card">
+              <img src="./media/images/recipe-page.jpg" />
+              <p>Recipe Page</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/product-preview-card/" class="project-card">
+              <img src="./media/images/product-preview-card.jpg" />
+              <p>Product Preview Card</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/four-card-feature/" class="project-card">
+              <img src="./media/images/four-card-feature.jpg" />
+              <p>Four Card Feature</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/meet-landing-page/" class="project-card">
+              <img src="./media/images/meet-landing-page.jpg" />
+              <p>Meet Landing Page</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./noobie/article-preview-component/" class="project-card">
+              <img src="./media/images/article-preview-component.jpg" />
+              <p>Article Preview Component</p>
+              <div class="glass-layer"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- junior challenges -->
+        <div class="junior-container">
+          <h3 class="project-title">Junior challenges</h3>
+          <div class="scrolling-container snaps-inline">
+            <a href="./junior/testimonial-grid-section/" class="project-card">
+              <img src="./media/images/testimonial-grid-section.jpg" alt="" />
+              <p>Testimonial Grid Section</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./junior/newsletter-sign-up" class="project-card">
+              <img src="./media/images/newsletter-sign-up.jpg" alt="" />
+              <p>Newsletter Sign Up</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./junior/time-tracking-dashboard/" class="project-card">
+              <img src="./media/images/time-tracking-dashboard.jpg" alt="" />
+              <p>Time Tracking Dashboard</p>
+              <div class="glass-layer"></div>
+            </a>
+            <a href="./junior/tip-calculator-app/" class="project-card">
+              <img src="./media/images/tip-calculator-app.jpg" alt="" />
+              <p>Tip Calculator App</p>
+              <div class="glass-layer"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="background-pattern" />
+      <div class="gradient" />
     </main>
   </body>
 </html>
