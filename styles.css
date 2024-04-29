@@ -154,7 +154,7 @@ header > p {
 }
 
 .scrolling-container {
-  /* border: 1px solid green; */
+  border: 1px solid green;
   display: grid;
   gap: 1rem;
   grid-auto-flow: column;
