@@ -109,9 +109,22 @@ validateInput = (day, month, year) => {
 
 function calculateAge(day, month, year) {
   const birthDate = new Date(year, month - 1, day);
-  const yyyy = todaysYear - birthDate.getFullYear();
-  const mm = todaysMonth - birthDate.getMonth();
-  const dd = todaysDay - birthDate.getDate();
+  // Calculate years
+  let yyyy = todaysYear - birthDate.getFullYear();
+
+  // Calculate months
+  let mm = todaysMonth - birthDate.getMonth();
+  if (mm < 0 || (mm === 0 && todaysDay < birthDate.getDate())) {
+    yyyy--;
+    mm = 12 - Math.abs(mm);
+  }
+
+  // Calculate days
+  let dd = todaysDay - birthDate.getDate();
+  if (dd < 0) {
+    dd += new Date(todaysYear, todaysMonth, 0).getDate();
+    mm--;
+  }
 
   //   happy birthday message
   if (dd === 0 && mm === 0) {
