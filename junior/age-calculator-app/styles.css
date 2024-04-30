@@ -1,0 +1,262 @@
+:root {
+  /* fonts */
+  --ff-primary: "Poppins", sans-serif;
+
+  --fw-light: 400;
+  --fw-normal: 700;
+  --fw-bold: 800;
+
+  --fstyle-italic: italic;
+  --fstyle-normal: normal;
+
+  --fs-inputs: 2rem;
+
+  /* colors */
+  --clr-primary: hsl(259, 100%, 65%);
+  --clr-error: hsl(0, 100%, 67%);
+
+  --clr-neutral-200: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(0, 0%, 94%);
+  --clr-neutral-600: hsl(0, 0%, 86%);
+  --clr-neutral-800: hsl(0, 1%, 44%);
+  --clr-neutral-black: hsl(0, 0%, 8%);
+}
+
+/* css resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: hsl(259, 100%, 65%, 0.3);
+  font-family: var(--ff-primary);
+  padding: 1rem;
+}
+
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.calculator-container {
+  background-color: var(--clr-neutral-200);
+  width: 343px; /* Set the initial max-width to 300px */
+
+  padding: 3rem 1.5rem;
+  border-radius: 2rem 2rem 6rem 2rem;
+  margin: 0 auto;
+}
+
+/* Inputs section */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* Add margin between input boxes */
+}
+
+.input-box > label {
+  font-family: var(--ff-primary);
+  font-size: 0.75rem;
+  font-weight: var(--fw-normal);
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--clr-neutral-800);
+  margin-bottom: 4px;
+}
+
+.input-box > input {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  border: 1px solid var(--clr-neutral-600);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  max-width: 7rem;
+}
+
+input::placeholder {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-normal);
+  color: var(--clr-neutral-800);
+  opacity: 80%;
+}
+
+.submit-button {
+  margin-block: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "left button right";
+  align-items: center;
+}
+
+.submit-button > .left-line {
+  grid-area: left;
+}
+
+.submit-button > .right-line {
+  grid-area: right;
+}
+
+.submit-button > .left-line,
+.submit-button > .right-line {
+  border: 1px solid var(--clr-neutral-400);
+  height: 1px;
+  width: 100%;
+}
+
+.submit-button button {
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  grid-area: button;
+}
+
+.submit-button button:hover {
+  background-color: var(--clr-neutral-black);
+}
+
+.error-message {
+  color: var(--clr-error);
+  font-style: var(--fstyle-italic);
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+/* results */
+
+.results {
+  line-height: 2.5rem;
+}
+
+.results > p {
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  font-style: var(--fstyle-italic);
+  color: var(--clr-neutral-black);
+  margin-bottom: 1rem;
+}
+
+.results > p > span {
+  color: var(--clr-primary);
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+}
+
+.happy-birthday {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-primary);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 100%;
+  display: none;
+}
+
+.happy-birthday > p {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: 1.75rem;
+  color: white;
+}
+
+#progress-bar {
+  height: 5px;
+  width: 100%;
+  background-color: #4caf50;
+  animation: progress-bar-animation 5s linear forwards;
+}
+
+@keyframes progress-bar-animation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@media (min-width: 768px) {
+  .calculator-container {
+    width: 800px;
+    padding: 3.5rem;
+    border-radius: 2rem 2rem 12rem 2rem;
+  }
+
+  .inputs {
+    gap: 2rem;
+  }
+
+  .input-box > input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border: 1px solid var(--clr-neutral-600);
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-inputs);
+    max-width: 9rem;
+    cursor: pointer;
+  }
+
+  .results {
+    line-height: 5rem;
+  }
+
+  .results > p {
+    font-size: 5.5rem;
+    font-weight: var(--fw-bold);
+    font-style: var(--fstyle-italic);
+    color: var(--clr-neutral-black);
+    margin-bottom: 1rem;
+  }
+
+  .results > p > span {
+    color: var(--clr-primary);
+
+    font-size: 5.5rem;
+    font-weight: var(--fw-bold);
+  }
+
+  .submit-button {
+    margin-block: 0rem;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "left right button";
+  }
+
+  .happy-birthday {
+    padding: 2rem;
+  }
+
+  .happy-birthday > p {
+    font-size: 5rem;
+  }
+}
