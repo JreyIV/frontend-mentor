@@ -52,6 +52,24 @@ span {
   padding: 0;
 }
 
+.button-home {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+}
+
+.button-home:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
 .calculator-container {
   background-color: var(--clr-neutral-200);
   width: 343px; /* Set the initial max-width to 300px */
@@ -169,6 +187,7 @@ input::placeholder {
 }
 
 .happy-birthday {
+  z-index: 10;
   position: absolute;
   top: 0%;
   left: 50%;
