@@ -227,7 +227,7 @@ input[type="radio"]:checked {
 /* results */
 
 #results {
-  background-color: var(--clr-primary);
+  background-image: linear-gradient(to right, #345ff6, #587dff);
   color: var(--clr-pure-white);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -242,6 +242,11 @@ input[type="radio"]:checked {
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   margin-top: 1rem;
+}
+
+#results > #BMI-value {
+  font-weight: bold;
+  font-size: var(--fs-heading-l);
 }
 
 .gradient {
