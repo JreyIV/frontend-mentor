@@ -39,6 +39,7 @@ body {
 
 h1,
 h2,
+h3,
 p,
 span {
   margin: 0;
@@ -71,6 +72,7 @@ span {
 }
 
 .hero-content h1 {
+  color: var(--clr-gunmetal);
   font-size: var(--fs-heading-l);
   font-weight: var(--fw-bold);
   line-height: 110%;
@@ -93,7 +95,7 @@ span {
   padding: 1.5rem;
   margin-inline: auto;
   border-radius: 0.75rem;
-  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 9, 0.1);
   width: calc(100% - 2rem);
   max-width: 564px;
 }
@@ -267,6 +269,176 @@ input[type="radio"]:checked {
   );
   z-index: -1;
   opacity: 75%;
+}
+
+/* meaning */
+
+.meaning {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.meaning-text {
+  padding-inline: 1.5rem;
+}
+
+.meaning-text > h2 {
+  color: var(--clr-gunmetal);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading-m);
+  margin-top: 3rem;
+}
+
+.meaning-text > p {
+  color: var(--clr-dark-electric-blue);
+  font-size: var(--fs-body);
+  margin-top: 2rem;
+  line-height: 1.25rem;
+}
+
+/********** health cards **********/
+
+.health-cards {
+  background-image: linear-gradient(
+    to bottom right,
+    #ffffff,
+    rgb(214, 253, 255, 0.2),
+    rgb(214, 230, 254, 0.2)
+  );
+  padding-block: 3.5rem;
+  padding-inline: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.icon-div img {
+  width: 64px;
+}
+
+.health-text {
+  margin-top: 2rem;
+}
+
+.health-text h3 {
+  color: var(--clr-gunmetal);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading-s);
+}
+
+.health-text p {
+  color: var(--clr-dark-electric-blue);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  margin-top: 1.5rem;
+  line-height: 1.25rem;
+}
+
+/********** limitation **********/
+
+.limitations {
+  padding-top: 4.5rem;
+  padding-bottom: 6rem;
+  padding-left: 1.15rem;
+  padding-right: 1.8rem;
+}
+
+.limitations-heading {
+  text-align: center;
+}
+
+.limitations-heading h2 {
+  color: var(--clr-gunmetal);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading-m);
+}
+
+.limitations-heading p {
+  color: var(--clr-dark-electric-blue);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  margin-top: 2rem;
+  line-height: 1.25rem;
+}
+
+.limitations-card-grid {
+  display: grid;
+  grid-template-areas:
+    "gender"
+    "age"
+    "muscle"
+    "pregnancy"
+    "race";
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+/* gender */
+.limitations-card-grid > .limitations-card:nth-child(1) {
+  grid-area: gender;
+  z-index: 1;
+}
+
+/* age */
+.limitations-card-grid > .limitations-card:nth-child(2) {
+  grid-area: age;
+  z-index: 2;
+}
+
+/* muscle */
+.limitations-card-grid > .limitations-card:nth-child(3) {
+  grid-area: muscle;
+  z-index: 3;
+}
+
+/* pregnancy */
+.limitations-card-grid > .limitations-card:nth-child(4) {
+  grid-area: pregnancy;
+  z-index: 4;
+}
+
+/* race */
+.limitations-card-grid > .limitations-card:nth-child(5) {
+  grid-area: race;
+  z-index: 5;
+}
+
+.limitations-card {
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+}
+
+.limitations-card > .card-top {
+  display: flex;
+  align-items: center;
+}
+
+.card-top img {
+  width: 32px;
+}
+
+.card-top h3 {
+  color: var(--clr-gunmetal);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-heading-s);
+  margin-left: 1rem;
+}
+
+.limitations-card > .card-bottom {
+  margin-top: 1rem;
+}
+
+.card-bottom p {
+  color: var(--clr-dark-electric-blue);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  line-height: 1.25rem;
 }
 
 @media (min-width: 400px) {
