@@ -44,22 +44,26 @@
         <p>Enter your details below</p>
         <div class="radio-method">
           <!-- metric -->
-          <input
-            type="radio"
-            name="radio"
-            value="metric"
-            id="radio-metric"
-            checked
-          />
-          <label for="metric">Metric</label>
+          <div class="radio-option">
+            <input
+              type="radio"
+              name="radio"
+              value="metric"
+              id="radio-metric"
+              checked
+            />
+            <label for="metric">Metric</label>
+          </div>
           <!-- Imperial -->
-          <input
-            type="radio"
-            name="radio"
-            value="imperial"
-            id="radio-imperial"
-          />
-          <label for="imperial">Imperial</label>
+          <div class="radio-option">
+            <input
+              type="radio"
+              name="radio"
+              value="imperial"
+              id="radio-imperial"
+            />
+            <label for="imperial">Imperial</label>
+          </div>
         </div>
         <div class="body-info">
           <!-- metric container -->
@@ -121,11 +125,15 @@
 
         <!-- results -->
         <div id="results">
-          <span id="results-bold">Welcome!</span>
-          <p id="BMI-value"></p>
-          <p id="results-text">
-            Enter your height and weight and you'll see your BMI result here
-          </p>
+          <div class="results-left">
+            <span id="results-bold">Welcome!</span>
+            <p id="BMI-value"></p>
+          </div>
+          <div class="results-right">
+            <p id="results-text">
+              Enter your height and weight and you'll see your BMI result here
+            </p>
+          </div>
         </div>
       </div>
       <div class="gradient"></div>
@@ -150,7 +158,7 @@
 
     <section class="health-cards">
       <!-- healthy eating -->
-      <div class="healthy-eating">
+      <div class="health-card">
         <div class="icon-div">
           <img src="./assets/images/icon-eating.svg" alt="eating icon" />
         </div>
@@ -164,7 +172,7 @@
       </div>
 
       <!-- regular exercise -->
-      <div class="regular-exercise">
+      <div class="health-card">
         <div class="icon-div">
           <img src="./assets/images/icon-exercise.svg" alt="exercise icon" />
         </div>
@@ -178,7 +186,7 @@
       </div>
 
       <!-- adequate sleep -->
-      <div class="adequate-sleep">
+      <div class="health-card">
         <div class="icon-div">
           <img src="./assets/images/icon-sleep.svg" alt="sleep icon" />
         </div>
