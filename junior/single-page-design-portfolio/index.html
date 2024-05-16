@@ -11,6 +11,17 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <!-- css  -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
   <body>
@@ -19,8 +30,12 @@
 
       <!-- nav -->
       <nav>
-        <img src="./assets/logo.svg" alt="logo" />
-        <button class="button black-button">Free Consultation</button>
+        <div>
+          <img src="./assets/logo.svg" alt="logo" />
+        </div>
+        <div>
+          <button class="button black-button">Free Consultation</button>
+        </div>
       </nav>
     </header>
 
@@ -73,13 +88,17 @@
           designed everything from brand illustrations to complete mobile apps.
           I’m also handy with a camera!
         </p>
-        <button class="button orange-button">Free Consultation</button>
+        <div>
+          <button class="button orange-button">Free Consultation</button>
+        </div>
       </div>
     </section>
 
     <!-- work -->
     <section class="work">
-      <h2>My Work</h2>
+      <div class="work-title">
+        <h2>My Work</h2>
+      </div>
       <div class="work-scroller">
         <img src="./assets/image-slide-1.jpg" />
         <img src="./assets/image-slide-2.jpg" />
@@ -106,7 +125,9 @@
           is for us to discuss your project during a free consultation. Then we
           can move forward from there.
         </p>
-        <button class="button orange-button">Free Consultation</button>
+        <div>
+          <button class="button orange-button">Free Consultation</button>
+        </div>
       </div>
     </section>
 
