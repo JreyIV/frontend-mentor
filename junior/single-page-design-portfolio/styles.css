@@ -246,7 +246,7 @@ nav img {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-bottom: 100px;
 }
 
@@ -265,6 +265,11 @@ nav img {
   align-items: center;
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.work-scroller.no-transition {
+  scroll-behavior: auto;
+  transition: none;
 }
 
 .work-scroller::-webkit-scrollbar {
