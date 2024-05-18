@@ -110,9 +110,15 @@ nav img {
 .black-button {
   background-color: black;
 }
+.black-button:hover {
+  background-color: var(--clr-galactic-blue);
+}
 
 .orange-button {
   background-color: #eb7565;
+}
+.orange-button:hover {
+  background-color: var(--clr-summer-yellow);
 }
 
 /********** Hero **********/
@@ -131,6 +137,7 @@ nav img {
 
 .hero-text p {
   font-size: var(--fs-body);
+  color: #7a746e;
   line-height: 26px;
   padding: 1rem;
   max-width: 650px;
@@ -142,8 +149,8 @@ nav img {
   grid-template-areas:
     "graphic graphic"
     "uiux apps"
-    "photography photography"
     "illustrations illustrations"
+    "photography photography"
     "motion motion";
   gap: 1.5rem;
   padding-inline: 1rem;
@@ -175,14 +182,14 @@ nav img {
   width: 159px;
   height: 182px;
 }
-.photography {
-  grid-area: photography;
+.illustrations {
+  grid-area: illustrations;
   background-color: var(--clr-light-red);
   width: 343px;
   height: 158px;
 }
-.illustrations {
-  grid-area: illustrations;
+.photography {
+  grid-area: photography;
   background-color: var(--clr-cyan);
   width: 343px;
   height: 182px;
@@ -236,8 +243,9 @@ nav img {
   line-height: 30px;
 }
 
-.about-text {
+.about-text p {
   line-height: 26px;
+  color: #7a746e;
 }
 
 /* work */
@@ -246,7 +254,7 @@ nav img {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding-bottom: 100px;
 }
 
@@ -269,7 +277,6 @@ nav img {
 
 .work-scroller.no-transition {
   scroll-behavior: auto;
-  transition: none;
 }
 
 .work-scroller::-webkit-scrollbar {
@@ -295,6 +302,9 @@ nav img {
   border: none;
   border-radius: 50%;
 }
+.arrow-button:hover {
+  background-color: var(--clr-galactic-blue);
+}
 
 /* cta */
 
@@ -315,6 +325,13 @@ nav img {
   border-radius: 0.5rem;
 }
 
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .cta-box h2 {
   font-size: 26px;
 }
@@ -327,8 +344,236 @@ nav img {
 
 /* tablet view */
 @media screen and (min-width: 768px) {
+  /* nav */
+
+  nav,
+  footer {
+    padding: 34px 40px;
+    justify-content: space-between;
+  }
+
+  nav img {
+    width: 64px;
+  }
+
+  .button {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    font-size: 16px;
+    padding: 20px 45px;
+    border: none;
+    border-radius: 2rem;
+  }
+
+  /* hero */
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 4.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: var(--fs-heading-m);
+  }
+
+  /* services grid */
+  .services {
+    grid-template-areas:
+      "graphic graphic uiux apps"
+      "graphic graphic illustrations illustrations"
+      "photography photography motion motion";
+  }
+
+  /* about */
+
+  .about {
+    flex-direction: row;
+    text-align: start;
+    gap: 69px;
+    transform: translateX(-8%);
+  }
+
+  .about > div {
+    flex: 1;
+  }
+
+  .about img {
+    min-width: 364px;
+    width: 100%;
+  }
+
+  .about-text {
+    padding: 0.5rem;
+  }
+
+  .about-text h2 {
+    font-size: var(--fs-heading-s);
+    line-height: 36px;
+  }
+
+  /* work */
+  .work {
+    gap: 52px;
+  }
+  .work-title h2 {
+    font-size: var(--fs-heading-s);
+  }
+
   .work-scroller img {
     width: 540px;
     height: 360px;
+  }
+
+  /* cta */
+
+  .cta {
+    padding-inline: 2.5rem;
+    padding-bottom: 40px;
+  }
+
+  .cta-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-neutral-200);
+    padding: 3rem 4.5rem;
+    border-radius: 0.5rem;
+  }
+
+  /* footer */
+  footer {
+    padding-bottom: 3.5rem;
+  }
+}
+
+/* laptop and desktop */
+@media screen and (min-width: 1160px) {
+  nav,
+  footer {
+    margin: 0 auto;
+    padding: 34px 0;
+    max-width: 1110px;
+  }
+
+  .hero-text h1 {
+    font-size: var(--fs-heading-l);
+  }
+
+  .hero-text p {
+    max-width: 750px;
+  }
+
+  /* services grid */
+  .services {
+    grid-template-areas:
+      "graphic graphic uiux apps photography"
+      "graphic graphic illustrations illustrations motion";
+  }
+
+  .graphic-design {
+    grid-area: graphic;
+    background-color: var(--clr-galactic-blue);
+    width: 354px;
+    height: 364px;
+  }
+  .ui-ux {
+    grid-area: uiux;
+    background-color: var(--clr-summer-yellow);
+    width: 159px;
+    height: 182px;
+  }
+  .apps {
+    grid-area: apps;
+    background-color: var(--clr-pink);
+    width: 159px;
+    height: 182px;
+  }
+  .illustrations {
+    grid-area: illustrations;
+    background-color: var(--clr-light-red);
+    width: 354px;
+    height: 158px;
+  }
+  .photography {
+    grid-area: photography;
+    background-color: var(--clr-cyan);
+    width: 354px;
+    height: 182px;
+  }
+  .motion-graphics {
+    grid-area: motion;
+    background-color: var(--clr-dark-purple);
+    width: 354px;
+    height: 158px;
+  }
+
+  /* about */
+
+  .about {
+    flex-direction: row;
+    text-align: start;
+    transform: none;
+    margin: 0 auto;
+    gap: 69px;
+    max-width: 1110px;
+  }
+
+  .about > div {
+    flex: 1;
+  }
+
+  .about img {
+    max-width: 445px;
+    width: 100%;
+  }
+
+  .about-text {
+    gap: 2rem;
+  }
+
+  .about-text h2 {
+    font-size: var(--fs-heading-m);
+    line-height: 3.5rem;
+  }
+
+  /* cta */
+
+  .cta {
+    padding-inline: 2.5rem;
+    padding-bottom: 40px;
+  }
+
+  .cta-box {
+    flex-direction: row;
+    text-align: start;
+    gap: 11.375rem;
+    padding: 5rem 4rem;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .cta-text {
+    text-align: start;
+    align-items: start;
+    max-width: 480px;
+  }
+
+  .cta-text h2 {
+    font-size: var(--fs-heading-m);
+  }
+
+  .cta-text p {
+    padding: 0;
+  }
+
+  /* footer */
+  footer {
+    padding-bottom: 4rem;
   }
 }
