@@ -22,7 +22,7 @@ function centerMiddleImage() {
 
 let cardPerView = Math.round(workScroller.offsetWidth / cardWidth);
 
-// insert copies of the last few cards to beginning of scroller for infinite scrolling
+//insert copies of the last few cards to beginning of scroller for infinite scrolling
 scrollerChildren
   .slice(-cardPerView)
   .reverse()
