@@ -132,7 +132,7 @@ h1 {
   border: none;
   outline: none;
   font-family: var(--ff-primary);
-  font-size: 13px;
+  font-size: clamp(13px, 2vw, 18px);
 }
 
 ::placeholder {
@@ -155,6 +155,7 @@ h1 {
   background-color: var(--clr-light-blue);
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
+  font-size: clamp(13px, 3vw, 15px);
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -174,13 +175,14 @@ h1 {
 
 .user-header {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
 .user-image {
   background-color: #0079ff;
-  width: 70px;
-  height: 70px;
+  width: clamp(70px, 3vw, 117px);
+  height: clamp(70px, 3vw, 117px);
   border-radius: 50%;
 }
 
@@ -191,17 +193,17 @@ h1 {
 }
 
 #username {
-  font-size: var(--fs-h3);
+  font-size: clamp(16px, 3vw, 26px);
   color: var(--clr-light-neutral-600);
 }
 
 #handle {
-  font-size: var(--fs-h4);
+  font-size: clamp(13px, 3vw, 16px);
   color: var(--clr-light-blue);
 }
 
 .joined-date {
-  font-size: var(--fs-h4);
+  font-size: clamp(13px, 3vw, 15px);
   color: var(--clr-light-gray);
 }
 
@@ -214,7 +216,7 @@ h1 {
 }
 
 #bio {
-  font-size: var(--fs-body);
+  font-size: clamp(13px, 3vw, 15px);
   color: var(--clr-light-gray);
 }
 
@@ -222,9 +224,9 @@ h1 {
   background-color: var(--clr-light-neutral-400);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
   padding: 1.15rem;
+  padding-inline: 2.5rem;
   border-radius: 0.5rem;
 }
 
@@ -236,13 +238,13 @@ h1 {
 }
 
 .stat h3 {
-  font-size: 11px;
+  font-size: clamp(11px, 3vw, 13px);
   font-weight: var(--fw-regular);
   color: var(--clr-light-gray);
 }
 
 .stat p {
-  font-size: var(--fs-h3);
+  font-size: clamp(16px, 3vw, 22px);
   font-weight: var(--fw-bold);
   color: var(--clr-light-neutral-600);
 }
@@ -250,7 +252,7 @@ h1 {
 .user-footer {
   display: grid;
   gap: 1rem;
-  font-size: var(--fs-h4);
+  font-size: clamp(13px, 3vw, 15px);
   color: var(--clr-light-navy-blue);
 }
 
@@ -270,7 +272,53 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+  #user-container {
+    padding: 2.5rem 2.5rem;
+  }
+
+  .user-image {
+    flex-shrink: 0;
+    background-color: #0079ff;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+  }
+
   .user-footer {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    max-width: 730px;
+  }
+
+  .user-header {
+    align-items: start;
+    gap: 2rem;
+  }
+  .user-image {
+    flex-shrink: 0;
+    background-color: #0079ff;
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+  }
+
+  .user-info-text {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .joined-date {
+    margin-top: 0.5rem;
+  }
+
+  .user-body {
+    width: 76%;
+    margin-left: auto;
+    margin-top: -35px;
   }
 }
