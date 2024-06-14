@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- javascript -->
     <script defer src="app.js"></script>
@@ -25,9 +31,9 @@
       <!-- home button -->
     </header>
 
-    <main>
+    <main class="main-container">
       <!-- title and theme toggle -->
-      <div>
+      <div class="header">
         <h1>devfinder</h1>
         <button id="button-toggle-theme">
           <span id="theme-toggle-text">Dark</span>
@@ -39,10 +45,17 @@
 
       <!-- search bar -->
       <div class="search">
-        <form action="submit">
-          <label for="search-bar">
-            <img src="./assets/icon-search.svg" alt="search icon" />
-            <input type="text" placeholder="Search GitHub username..." />
+        <form id="form" action="/">
+          <label for="search-bar" class="search-bar">
+            <div class="search-bar-icons">
+              <img src="./assets/icon-search.svg" alt="search icon" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search GitHub username..."
+              class="search-bar-input"
+              id="search-bar"
+            />
             <button id="button-search">Search</button>
           </label>
         </form>
@@ -50,46 +63,51 @@
 
       <!-- user info container -->
       <div id="user-container">
-        <!-- user pfp -->
-        <div id="profile-picture">image goes here</div>
-        <!-- user info -->
-        <div id="user-info">
-          <div class="uses-header">
-            <h2 id="username">{username}</h2>
-            <p>Joined <span id="date-joined">{date}</span></p>
+        <div class="user-header">
+          <div class="user-image"></div>
+          <div class="user-info-text">
+            <div class="username-handle">
+              <h2 id="username">{username}</h2>
+              <p id="handle">{@handle}</p>
+            </div>
+            <p class="joined-date">Joined <span id="date">{date}</span></p>
           </div>
-          <p id="user-handle">{@handle}</p>
-          <p id="user-bio">{bio}</p>
+        </div>
+        <div class="user-body">
+          <p id="bio">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aspernatur, recusandae!
+          </p>
           <div class="user-stats">
-            <div>
-              <p>Repos</p>
-              <span id="repos-value">{repo #}</span>
+            <div class="stat">
+              <h3>Repos</h3>
+              <p id="repos-value">8</p>
             </div>
-            <div>
-              <p>Followers</p>
-              <span id="followers-value">{followers#}</span>
+            <div class="stat">
+              <h3>Followers</h3>
+              <p id="followers-value">3938</p>
             </div>
-            <div>
-              <p>Following</p>
-              <span id="following-value">{following#}</span>
+            <div class="stat">
+              <h3>Following</h3>
+              <p id="following-value">9</p>
             </div>
           </div>
           <div class="user-footer">
-            <div id="location">
+            <div class="info-box">
               <img src="./assets/icon-location.svg" alt="location icon" />
-              <p id="user-location">{location}</p>
+              <p id="location-value">San Francisco</p>
             </div>
-            <div id="twitter">
+            <div class="info-box">
+              <img src="./assets/icon-website.svg" alt="website icon" />
+              <p id="website-value">https://github.blog</p>
+            </div>
+            <div class="info-box">
               <img src="./assets/icon-twitter.svg" alt="twitter icon" />
-              <p id="user-twitter">{twitter}</p>
+              <p id="twitter-value">Not Available</p>
             </div>
-            <div id="website">
-              <img src="./assets/icon-website.svg" alt="link icon" />
-              <p id="user-website">{website}</p>
-            </div>
-            <div>
+            <div class="info-box">
               <img src="./assets/icon-company.svg" alt="company icon" />
-              <p id="user-company">{company}</p>
+              <p id="company-value">@github</p>
             </div>
           </div>
         </div>
