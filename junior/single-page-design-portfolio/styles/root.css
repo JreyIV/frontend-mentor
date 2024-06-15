@@ -1,0 +1,28 @@
+:root {
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
+
+  --fw-body: 500;
+  --fw-bold: 700;
+
+  --fs-heading-l: 3.5rem;
+  --fs-heading-m: 2.5rem;
+  --fs-heading-s: 2rem;
+  --fs-body: 1.125rem;
+
+  --clr-neutral-200: hsl(28, 100%, 97%);
+  --clr-neutral-400: hsl(30, 5%, 45%);
+  --clr-neutral-600: hsl(0, 0%, 1%);
+
+  --clr-galactic-blue: #755cde;
+  --clr-summer-yellow: #f6a560;
+  --clr-pink: #f39e9e;
+  --clr-light-red: #eb7565;
+  --clr-cyan: #61c4b7;
+  --clr-dark-purple: #552049;
+
+  --tablet: 550;
+  --desktop: 1000;
+  --tablet-viewport: calc((var(--tablet)/ 16 )*1rem);
+  --desktop-viewport: calc((var(--desktop)/ 16 )*1rem);
+
+}

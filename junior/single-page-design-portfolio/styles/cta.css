@@ -1,0 +1,83 @@
+@import "./root.css";
+
+.cta {
+  padding-inline: 1rem;
+  padding-bottom: 40px;
+}
+
+.cta-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: var(--clr-neutral-600);
+  color: var(--clr-neutral-200);
+  padding: 3rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cta-box h2 {
+  font-size: 26px;
+}
+
+.cta-box p {
+  font-size: 1rem;
+  line-height: 26px;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .cta {
+    padding-inline: 2.5rem;
+    padding-bottom: 40px;
+  }
+
+  .cta-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-neutral-200);
+    padding: 3rem 4.5rem;
+    border-radius: 0.5rem;
+  }
+}
+@media (min-width:72.5rem) {
+  .cta {
+    padding-inline: 2.5rem;
+    padding-bottom: 40px;
+  }
+
+  .cta-box {
+    flex-direction: row;
+    text-align: start;
+    gap: 11.375rem;
+    padding: 5rem 4rem;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .cta-text {
+    text-align: start;
+    align-items: start;
+    max-width: 480px;
+  }
+
+  .cta-text h2 {
+    font-size: var(--fs-heading-m);
+  }
+
+  .cta-text p {
+    padding: 0;
+  }
+}
