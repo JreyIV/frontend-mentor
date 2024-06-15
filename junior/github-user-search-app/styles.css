@@ -49,6 +49,8 @@
 }
 
 body {
+  max-width: 1920px;
+  margin: auto;
   height: 100vh;
   margin: 0;
   font-family: var(--ff-primary);
