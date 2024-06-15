@@ -59,6 +59,11 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
+// clicked (for mobile)
+toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("clicked");
+});
+
 //********** form **********//
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();

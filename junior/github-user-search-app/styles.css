@@ -134,6 +134,14 @@ h1 {
   filter: brightness(0);
 }
 
+#button-toggle-theme.clicked {
+  color: var(--clr-light-gray);
+}
+
+#button-toggle-theme.clicked img {
+  filter: none;
+}
+
 /* search bar */
 
 .search-bar {
