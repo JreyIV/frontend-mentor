@@ -185,6 +185,10 @@ header > p {
   opacity: 0;
 }
 
+.scrolling-container > a > .github-project {
+  color: white;
+}
+
 .scrolling-container > a:hover > p {
   opacity: 1;
 }
