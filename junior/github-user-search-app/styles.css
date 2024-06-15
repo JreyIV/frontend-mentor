@@ -97,7 +97,7 @@ img {
   max-width: 573px;
   width: 100%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 20%;
 }
 
 /* header */
@@ -326,6 +326,9 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+  .main-container {
+    margin-top: 3%;
+  }
   #user-container {
     padding: 2.5rem 2.5rem;
   }
