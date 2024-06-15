@@ -1,0 +1,105 @@
+:root {
+  --ff-primary: "Manrope", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 800;
+
+  --fs-quote: 28px;
+
+  --clr-quote-text: hsl(193, 38%, 86%);
+  --clr-accent: hsl(150, 100%, 66%);
+
+  --clr-neutral-200: hsl(217, 19%, 38%);
+  --clr-neutral-400: hsl(217, 19%, 24%);
+  --clr-neutral-600: hsl(218, 23%, 16%);
+}
+
+/* css resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-primary);
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--clr-neutral-600);
+  max-width: 1440px;
+  height: 100vh;
+}
+
+h1,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.275rem;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+p {
+  color: var(--clr-quote-text);
+  font-size: var(--fs-quote);
+  font-weight: bold;
+}
+
+.advice-container {
+  position: relative;
+  background-color: var(--clr-neutral-400);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 550px;
+  padding-top: 2.5rem;
+  padding-inline: 1.5rem;
+  padding-bottom: 5rem;
+  margin: auto;
+  margin-top: 5rem;
+  border-radius: 0.75rem;
+}
+
+.advice-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#button-dice {
+  position: absolute;
+  bottom: -30px;
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: 50%;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+#button-dice:hover {
+  box-shadow: 0 0 30px rgb(82, 255, 168, 0.5);
+}
+
+@media screen and (min-width: 1024px) {
+  .advice-container {
+    margin-top: 8rem;
+  }
+  .divider {
+    content: url("./images/pattern-divider-desktop.svg");
+  }
+}
