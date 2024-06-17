@@ -2,24 +2,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const work = document.querySelector("#work");
   if (work) {
     work.innerHTML = `
-<div class="work-title">
-    <h2>My Work</h2>
-</div>
-<div class="work-scroller">
-    <img src="../../assets/image-slide-1.jpg" />
-    <img src="../../assets/image-slide-2.jpg" />
-    <img src="../../assets/image-slide-3.jpg" />
-    <img src="../../assets/image-slide-4.jpg" />
-    <img src="../../assets/image-slide-5.jpg" />
-</div>
-<div class="arrow-buttons">
-    <button class="arrow-button" id="left-arrow">
-        <img src="../../assets/icon-arrow-left.svg" alt="left-arrow" />
-    </button>
-    <button class="arrow-button" id="right-arrow">
-        <img src="../../assets/icon-arrow-right.svg" alt="right-arrow" />
-    </button>
-</div>`;
+    <div class="work-title">
+        <h2>My Work</h2>
+    </div>
+    <ul class="work-scroller">
+      <li>
+          <img alt="Project 01" src="../../assets/image-slide-1.jpg" />
+      </li>
+      <li>
+          <img alt="Project 02" src="../../assets/image-slide-2.jpg" />
+      </li>
+      <li>
+          <img alt="Project 03" src="../../assets/image-slide-3.jpg" />
+      </li>
+      <li>
+          <img alt="Project 03" src="../../assets/image-slide-4.jpg" />
+      </li>
+      <li>
+          <img alt="Project 04" src="../../assets/image-slide-5.jpg" />
+      </li>
+    </ul>
+    <div class="arrow-buttons">
+        <button class="arrow-button" id="left-arrow">
+            <img src="../../assets/icon-arrow-left.svg" alt="left-arrow" />
+        </button>
+        <button class="arrow-button" id="right-arrow">
+            <img src="../../assets/icon-arrow-right.svg" alt="right-arrow" />
+        </button>
+    </div>`;
   }
 
   const arrowButtons = document.querySelectorAll(".arrow-button");
