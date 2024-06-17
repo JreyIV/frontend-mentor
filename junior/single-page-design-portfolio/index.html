@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,8 +11,16 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <!-- javascript -->
+    <script defer src="javascript/header.js"></script>
+
+    <script defer src="javascript/main/hero.js"></script>
+    <script defer src="javascript/main/services.js"></script>
+    <script defer src="javascript/main/about.js"></script>
+    <script defer src="javascript/main/work.js"></script>
+    <script defer src="javascript/main/cta.js"></script>
     <!-- css  -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,123 +30,17 @@
       rel="stylesheet"
     />
 
-    <!-- javascript -->
-    <script defer src="app.js"></script>
-
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
   <body>
-    <header>
-      <!-- homepage button -->
-      <a href="https://jreyiv.github.io/frontend-mentor/" class="button-home"
-        ><div>Homepage</div>
-      </a>
-      <!-- nav -->
-      <nav>
-        <div>
-          <img src="./assets/logo.svg" alt="logo" />
-        </div>
-        <div>
-          <button class="button black-button">Free Consultation</button>
-        </div>
-      </nav>
-    </header>
-
-    <!-- hero text -->
-    <section class="hero-text">
-      <h1>Design solutions made easy</h1>
-      <p>
-        With over ten years of experience in various design disciplines, I’m
-        your one-stop shop for your design needs.
-      </p>
-    </section>
-
-    <!-- services grid -->
-    <section class="services">
-      <div class="service-card graphic-design">
-        <h2>Graphic Design</h2>
-        <img src="./assets/pattern-graphic-design.svg" alt="graphic design" />
-      </div>
-      <div class="service-card ui-ux">
-        <h2>UI/UX</h2>
-        <img src="./assets/pattern-ui-ux.svg" alt="ui/ux" />
-      </div>
-      <div class="service-card apps">
-        <h2>Apps</h2>
-        <img src="./assets/pattern-apps.svg" alt="apps" />
-      </div>
-      <div class="service-card photography">
-        <h2>Photography</h2>
-        <img src="./assets/pattern-photography.svg" alt="photography" />
-      </div>
-      <div class="service-card illustrations">
-        <h2>Illustrations</h2>
-        <img src="./assets/pattern-illustrations.svg" alt="illustrations" />
-      </div>
-      <div class="service-card motion-graphics">
-        <h2>Motion Graphics</h2>
-        <img src="./assets/pattern-motion-graphics.svg" alt="motion graphics" />
-      </div>
-    </section>
-
-    <!-- about -->
-    <section class="about">
-      <div class="about-image">
-        <img src="./assets/image-amy.webp" alt="profile picture" />
-      </div>
-      <div class="about-text">
-        <h2>I’m Amy, and I’d love to work on your next project</h2>
-        <p>
-          I love working with others to create beautiful design solutions. I’ve
-          designed everything from brand illustrations to complete mobile apps.
-          I’m also handy with a camera!
-        </p>
-        <div>
-          <button class="button orange-button">Free Consultation</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- work -->
-    <section class="work">
-      <div class="work-title">
-        <h2>My Work</h2>
-      </div>
-      <div class="work-scroller">
-        <img src="./assets/image-slide-1.jpg" />
-        <img src="./assets/image-slide-2.jpg" />
-        <img src="./assets/image-slide-3.jpg" />
-        <img src="./assets/image-slide-4.jpg" />
-        <img src="./assets/image-slide-5.jpg" />
-      </div>
-      <div class="arrow-buttons">
-        <button class="arrow-button" id="left-arrow">
-          <img src="./assets/icon-arrow-left.svg" alt="left-arrow" />
-        </button>
-        <button class="arrow-button" id="right-arrow">
-          <img src="./assets/icon-arrow-right.svg" alt="right-arrow" />
-        </button>
-      </div>
-    </section>
-
-    <!-- cta -->
-    <section class="cta">
-      <div class="cta-box">
-        <div class="cta-text">
-          <h2>Book a call with me</h2>
-          <p>
-            I’d love to have a chat to see how I can help you. The best first
-            step is for us to discuss your project during a free consultation.
-            Then we can move forward from there.
-          </p>
-        </div>
-        <div>
-          <button class="button orange-button">Free Consultation</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer -->
+    <header></header>
+    <main>
+      <section id="hero" class="hero-text"></section>
+      <section id="services" class="services"></section>
+      <section id="about" class="about"></section>
+      <section id="work" class="work"></section>
+      <section id="cta" class="cta"></section>
+    </main>
     <footer>
       <img src="./assets/logo.svg" alt="logo" />
       <button class="button black-button">Free Consultation</button>

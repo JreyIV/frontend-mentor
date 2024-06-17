@@ -1,0 +1,62 @@
+@import "./root.css";
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+.hero-text h1 {
+  font-size: var(--fs-heading-m);
+}
+
+.hero-text p {
+  font-size: var(--fs-body);
+  color: #7a746e;
+  line-height: 26px;
+  padding: 1rem;
+  max-width: 650px;
+}
+
+@media (min-width: 48rem) {
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 4.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: var(--fs-heading-m);
+  }
+}
+
+@media (min-width: 48rem) {
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 4.25rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: var(--fs-heading-m);
+  }
+}
+
+@media (min-width: 72.5rem) {
+  .hero-text h1 {
+    font-size: var(--fs-heading-l);
+  }
+
+  .hero-text p {
+    max-width: 750px;
+  }
+}
