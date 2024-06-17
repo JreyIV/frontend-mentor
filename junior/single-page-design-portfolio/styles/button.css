@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width:72.5rem) {
+@media (min-width: 72.5rem) {
   .button-home {
     display: block;
   }

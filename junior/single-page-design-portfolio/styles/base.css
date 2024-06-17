@@ -6,7 +6,7 @@ body {
   max-width: 1920px;
 }
 
-main >*{
+main > * {
   margin: 0 auto;
 }
 
@@ -15,7 +15,8 @@ h2 {
   font-weight: var(--fw-bold);
 }
 
-header, footer {
+header,
+footer {
   max-width: var(--desktop-viewport);
   margin: auto;
 }
@@ -48,7 +49,7 @@ nav img {
   }
 }
 
-@media (min-width:72.5rem) {
+@media (min-width: 72.5rem) {
   nav,
   footer {
     margin: 0 auto;

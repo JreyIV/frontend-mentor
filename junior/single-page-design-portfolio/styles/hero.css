@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width:72.5rem) {
+@media (min-width: 72.5rem) {
   .hero-text h1 {
     font-size: var(--fs-heading-l);
   }
