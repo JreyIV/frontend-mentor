@@ -22,7 +22,6 @@
 
   --tablet: 550;
   --desktop: 1000;
-  --tablet-viewport: calc((var(--tablet)/ 16 )*1rem);
-  --desktop-viewport: calc((var(--desktop)/ 16 )*1rem);
-
+  --tablet-viewport: calc((var(--tablet) / 16) * 1rem);
+  --desktop-viewport: calc((var(--desktop) / 16) * 1rem);
 }
