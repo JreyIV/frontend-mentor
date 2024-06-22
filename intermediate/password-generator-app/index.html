@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- javascript -->
+    <script defer src="app.js"></script>
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <header>
+      <!-- homepage button -->
+    </header>
+    <main>
+      <h1>Password Generator</h1>
+      <div class="password-box">
+        <p id="generated-password">P4$5W0rD!</p>
+        <button id="button-copy">
+          <img src="./assets/images/icon-copy.svg" alt="copy icon" />
+        </button>
+      </div>
+
+      <!-- password selectors -->
+      <form id="form">
+        <div class="password-selectors">
+          <label for="character-length">
+            <div class="character-length-section">
+              <p>Character Length</p>
+              <span id="length-value">10</span>
+            </div>
+            <div class="slider-container">
+              <input
+                type="range"
+                min="0"
+                max="20"
+                value="0"
+                class="slider"
+                id="myRange"
+              />
+            </div>
+          </label>
+
+          <!-- indluces check boxes -->
+          <div class="includes-container">
+            <div class="include-selectors">
+              <input type="checkbox" name="uppercase" id="uppercase" />
+              <label for="">Include Uppercase Letters</label>
+            </div>
+            <div class="include-selectors">
+              <input type="checkbox" name="lowercase" id="lowercase" />
+              <label for="">Include Lowercase Letters</label>
+            </div>
+            <div class="include-selectors">
+              <input type="checkbox" name="numbers" id="numbers" />
+              <label for="">Include Numbers</label>
+            </div>
+            <div class="include-selectors">
+              <input type="checkbox" name="symbols" id="symbols" />
+              <label for="">Include Symbols</label>
+            </div>
+          </div>
+
+          <!-- strength box -->
+          <div class="strength-container">
+            <p>Strength</p>
+            <div class="strength-meter">
+              <span>Medium</span>
+              <div class="strength-bar" id="bar1"></div>
+              <div class="strength-bar" id="bar2"></div>
+              <div class="strength-bar" id="bar3"></div>
+              <div class="strength-bar" id="bar4"></div>
+            </div>
+          </div>
+          <button type="submit" id="button-submit">
+            Generate
+            <img src="./assets/images/icon-arrow-right.svg" alt="right arrow" />
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
