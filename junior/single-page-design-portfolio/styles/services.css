@@ -1,0 +1,115 @@
+@import "./root.css";
+/* services grid */
+.services {
+  height: fit-content;
+  width: 100%;
+  max-width: var(--desktop-viewport);
+
+  display: grid;
+  grid-template-areas:
+    "graphic graphic"
+    "uiux apps"
+    "illustrations illustrations"
+    "photography photography"
+    "motion motion";
+  gap: 1.5rem;
+  padding-inline: 1rem;
+
+  margin: 0 auto;
+  margin-bottom: 124px;
+}
+
+.service-card {
+  min-height: 10ex;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+  padding-block-end: 0.5rem;
+}
+
+.graphic-design {
+  grid-area: graphic;
+  background-color: var(--clr-galactic-blue);
+}
+.ui-ux {
+  grid-area: uiux;
+  background-color: var(--clr-summer-yellow);
+}
+.apps {
+  grid-area: apps;
+  background-color: var(--clr-pink);
+}
+.illustrations {
+  grid-area: illustrations;
+  background-color: var(--clr-light-red);
+}
+.photography {
+  grid-area: photography;
+  background-color: var(--clr-cyan);
+}
+.motion-graphics {
+  grid-area: motion;
+  background-color: var(--clr-dark-purple);
+}
+
+.service-card h2 {
+  color: var(--clr-neutral-200);
+  font-size: 1.5rem;
+  align-self: start;
+}
+
+.service-card img {
+  align-self: end;
+}
+
+@media (min-width: 48rem) {
+  /* services grid */
+  .services {
+    grid-template-areas:
+      "graphic graphic uiux apps"
+      "graphic graphic illustrations illustrations"
+      "photography photography motion motion";
+  }
+}
+@media (min-width: 48rem) {
+  /* services grid */
+  .services {
+    grid-template-areas:
+      "graphic graphic uiux apps photography"
+      "graphic graphic illustrations illustrations motion";
+  }
+
+  .graphic-design {
+    grid-area: graphic;
+    background-color: var(--clr-galactic-blue);
+  }
+
+  .ui-ux {
+    grid-area: uiux;
+    background-color: var(--clr-summer-yellow);
+  }
+
+  .apps {
+    grid-area: apps;
+    background-color: var(--clr-pink);
+  }
+
+  .illustrations {
+    grid-area: illustrations;
+    background-color: var(--clr-light-red);
+  }
+
+  .photography {
+    grid-area: photography;
+    background-color: var(--clr-cyan);
+  }
+
+  .motion-graphics {
+    grid-area: motion;
+    background-color: var(--clr-dark-purple);
+  }
+}

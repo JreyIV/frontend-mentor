@@ -1,0 +1,61 @@
+@import "./root.css";
+
+.button-home {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+  z-index: 20;
+  display: none;
+}
+
+.button-home:hover {
+  background-color: aliceblue;
+  color: var(--clr-neutral-1000);
+}
+
+/********* button *********/
+.button {
+  color: var(--clr-neutral-200);
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.black-button {
+  background-color: black;
+}
+.black-button:hover {
+  background-color: var(--clr-galactic-blue);
+}
+
+.orange-button {
+  background-color: #eb7565;
+}
+.orange-button:hover {
+  background-color: var(--clr-summer-yellow);
+}
+@media (min-width: 48rem) {
+  .button {
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    font-size: 16px;
+    padding: 20px 45px;
+    border: none;
+    border-radius: 2rem;
+  }
+}
+
+@media (min-width: 72.5rem) {
+  .button-home {
+    display: block;
+  }
+}
