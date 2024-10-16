@@ -1,0 +1,60 @@
+:root {
+  --ff-primary: "Plus Jakarta Sans", sans-serif;
+
+  --clr-dark-blue: hsl(233, 54, 16);
+  --clr-light-blue: hsl(234, 25, 52);
+
+  --clr-dark-pink: hsl(341, 92, 62);
+  --clr-light-pink: hsl(341, 100, 83);
+
+  --clr-grey: hsl(232, 10, 56);
+  --clr-white: hsl(0, 0, 100);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--ff-primary);
+  margin: 0;
+  padding: 0;
+  max-width: 1600px;
+  margin: auto;
+}
+
+p,
+h1,
+h2,
+span {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+.header-bar {
+  background-color: red;
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-get-started {
+  padding: 16px 32px;
+  border-radius: 2rem;
+  border: none;
+  font-family: var(--ff-primary);
+}
+
+header > button {
+  background-color: var(--clr-dark-blue);
+}
